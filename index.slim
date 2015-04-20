@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css"
+
+    / Javascripts
+    script src="/bower_components/jquery/dist/jquery.js"
+    script src="/bower_components/angularjs/angular.js"
+    script src="/bower_components/angular-route/angular-route.js"
+    script src="/js/main.js"
+  body ng-app="app"
+    .container
+      .page-header
+        h1 AngularJS Google Adsense Test
+      p.lead This is a test of Google Adsense to debug issues with AngularJS.
+      p 
+        | For more information, please contact <a href="mailto:leonard@artstation.com">Leonard Teo</a>.
+
+      h2 Description of the problem
+      p AngularJS (created by Google) is a single-page-application framework. It loads in content dynamically without a full refresh of the DOM (Document Object Model). This appears to be incompatible with Adsense and DFP.
+
+      p To test this, switch between Page 1 and Page 2 several times. After about 5 impressions, it fails to load any more ads.
+
+      p
+        a.btn.btn-primary href="#/page1" Page 1
+        | &nbsp;
+        a.btn.btn-primary href="#/page2" Page 2
+
+      hr
+
+      div ng-view=""
+
+    | <!-- Google Ad Script -->
+    | <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
