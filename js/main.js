@@ -6,10 +6,10 @@ window.app = angular.module('app', ['ngRoute']);
 window.app.config([
   '$routeProvider', function($routeProvider) {
     $routeProvider.when('/page1', {
-      templateUrl: '/partials/page1.html',
+      templateUrl: 'partials/page1.html',
       controller: 'pageOneController'
     }).when('/page2', {
-      templateUrl: '/partials/page2.html',
+      templateUrl: 'partials/page2.html',
       controller: 'pageTwoController'
     }).otherwise({
       redirectTo: '/page1'

@@ -7,11 +7,11 @@ window.app = angular.module('app', [
 window.app.config(['$routeProvider', ($routeProvider) -> 
   $routeProvider
     .when('/page1', {
-      templateUrl: '/partials/page1.html'
+      templateUrl: 'partials/page1.html'
       controller: 'pageOneController'
     })
     .when('/page2', {
-      templateUrl: '/partials/page2.html'
+      templateUrl: 'partials/page2.html'
       controller: 'pageTwoController'
     })
     .otherwise({
