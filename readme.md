@@ -2,6 +2,8 @@
 
 This is a test of Google Adsense to debug issues with AngularJS.
 
+[View it here](http://leonardteo.github.io/google-ads-test-angularjs)
+
 For more information, please contact [Leonard Teo](leonard@artstation.com).
 
 ## Description of the problem
