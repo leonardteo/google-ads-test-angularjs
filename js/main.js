@@ -20,11 +20,30 @@ window.app.config([
 window.app.controller('pageOneController', [
   '$scope', function($scope) {
     console.log("Page 1");
+    $scope.rand = Math.random();
   }
 ]);
 
 window.app.controller('pageTwoController', [
   '$scope', function($scope) {
     console.log("Page 2");
+    $scope.rand = Math.random();
+  }
+]);
+
+window.app.directive('googleAd', [
+  '$timeout', function($timeout) {
+    return {
+      restrict: 'A',
+      link: function(scope, element, attr) {
+        return $timeout(function() {
+          var adsbygoogle, html, rand;
+          rand = Math.random();
+          html = "<ins class='adsbygoogle' style='display:inline-block;width:300px;height:250px' data-ad-client='ca-pub-3199660652950290' data-ad-slot='6259591966' data-ad-region='page-" + rand + "'></ins>";
+          $(element).append(html);
+          return (adsbygoogle = window.adsbygoogle || []).push({});
+        });
+      }
+    };
   }
 ]);
